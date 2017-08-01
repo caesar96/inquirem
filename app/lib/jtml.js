@@ -312,7 +312,7 @@
                 resultString += 'function isFunction(func){return (typeof func === \'function\');}\n';
                 resultString += 'function c(val, ctx) {if (typeof val !== "undefined" && val !== null) {if (isFunction(val)) {return val.call(ctx);} else return val;} else return "";}\n';
                 if (t.templateName.length > 0)
-					resultString += 'ctx_1.page = \'' + t.templateName + '\';';
+					resultString += 'ctx_1.page = \'' + t.templateName + '\';console.log(ctx_1.page);';
 				resultString += '\nroot = root || ctx_1 || {};\n';
             }
             resultString += 'var r = \'\';\n';

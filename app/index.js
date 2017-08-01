@@ -7,7 +7,7 @@ const KoaBody = require('koa-body');
 // CUSTOM ROUTES OBJECTS
 const Routes = require(ROUTES.ROOT);
 // TEMPLATE ENGINE
-const Templates = require(_LIB_ + 'jtml')({html_dir: VIEWS, cache: (process.env.NODE_ENV == 'production')});
+const Templates = require(_LIB_ + 'jtml')({html_dir: VIEWS, cache: false});
 // CONTROLLERS
 const Controllers = require(CONTROLLERS);
 // SITE SETTINGS
