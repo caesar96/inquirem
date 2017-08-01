@@ -1,0 +1,8 @@
+{
+  "name": "Inquirem",
+  "description": "Inquirem is a social network clon (from Ask.fm) which allows you to ask questions to people you want to. It makes sense when you are a shy guy who found the profile the girl you like and you see a great chance to ask so interesting questions to her without a personal interaction.",
+  "repository": "https://github.com/caesar96/inquirem",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

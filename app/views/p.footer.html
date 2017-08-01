@@ -1,0 +1,16 @@
+		{{#js_compare "this.page == 'welcome'"}}
+		<footer>
+			<div class="rsp-container">
+				<nav class="faces rsp-gte-tablet">
+				{{#each welcomeFaces}}
+					<a style="background-image:url({{#if thumb_avatar}}{{thumb_avatar}}{{else}}http://i.imgur.com/HSmdSGH.jpg{{/if}})" href="/{{nick}}">{{nick}}</a>
+				{{/each}}
+				</nav>
+				<nav class="site-links rsp-gte-tablet"></nav>
+				<span class="copyright" style="color:#333;">&copy; {{Config.title}} {{js "return new Date().getFullYear()"}}</span>
+			</div>
+		</footer>
+	</div>
+	{{/js_compare}}
+</body>
+</html>

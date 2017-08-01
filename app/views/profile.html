@@ -1,0 +1,235 @@
+{{> header}}
+<div id="contentArea" class="">
+    <div class="rsp-container">
+        <!---->
+        <div class="rsp-row top-content">
+            <!---->
+            <div class="profile-background" style="background-image:url({{#if userData.background}}{{userData.background}}{{else}}http://i.imgur.com/HSmdSGH.jpg{{/if}})">
+                <div class="profile-header">
+                    <a style="background-image:url({{#if userData.thumb_avatar}}{{userData.thumb_avatar}}{{else}}http://i.imgur.com/HSmdSGH.jpg{{/if}})" class=" profile-picture" data-action="ImagesOpen" data-urls="{&quot;{{#if userData.thumb_avatar}}{{userData.thumb_avatar}}{{else}}http://i.imgur.com/HSmdSGH.jpg{{/if}}&quot;:&quot;{{#if userData.avatar}}{{userData.avatar}}{{else}}http://i.imgur.com/HSmdSGH.jpg{{/if}}&quot;}" href="/{{#if userData.nick}}{{userData.nick}}{{else}}testuser{{/if}}/avatar"></a>
+                    <a class="profile-name" href="/{{userData.nick}}"><span class="blockLink">{{userData.fullname}} - {{userData.fechaRegistro}}</span><span class="blockLink" dir="ltr">@{{userData.nick}}</span></a>
+                    <div class="profile-label">
+                        <a class=" icon-add-friend" data-action="PopupOpen" data-url="/login/prompt" href="#">Seguir</a>
+                    </div>
+                    <a class="left icon-flag" title="Denunciar" data-action="PopupOpen" data-url="/{{userData.nick}}/flag?reload=true" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;report-user&quot;,&quot;User reports&quot;,&quot;Index&quot;]}" href="#"></a>
+                    <a class="btn-primary-wide rsp-lte-tablet" data-action="PopupOpen" data-url="/login/prompt" href="#">Pregúntame cualquier cosa</a>
+                </div>
+            </div>
+            <!---->
+            {{#js_compare "this.userData.bio || this.userData.location || this.userData.websites || this.userData.p_interest"}}
+            <div class="profile-bio rsp-lte-tablet">
+                {{#if userData.bio}}
+                <p class="icon-bio">{{userData.bio}}</p>
+                {{/if}}
+                 {{#if userData.location}}
+                <p class="icon-location">{{userData.location}}</p>
+                {{/if}}
+                {{#if userData.websites}}
+                <p class="icon-link">{{userData.websites}}</p>
+                {{/if}}
+            </div>
+            {{/js_compare}}
+        </div>
+        <!---->
+        <div class="rsp-row main-content util-clearfix">
+            {{#if AnswerId}}
+            <div class="rsp-gte-mobile main-column">
+                <div class="item streamItem streamItem-singleAnswer">
+
+                    <div class="streamItemContent streamItemContent-question">
+                        <h1 class="old">{{Answers.question}}</h1>
+                    </div>
+
+                    <div class="answerWrapper">
+                        <p class="streamItemContent streamItemContent-answer">{{Answers.answer}}</p>
+                        <p class="readMore">
+                            <a class="button" data-action="ReadMore" href="#">Ver más</a>
+                        </p>
+                    </div>
+
+
+
+                    <div class="streamItemContent streamItemContent-footer old">
+                        <div class="streamItemsAge links">
+                            <a title="Atrás" class="icon-caret-left" href="{{userData.nick}}/answers/142063069419"></a>
+                            <a title="{{Answers.date_full}}" href="/{{userData.nick}}/answers/{{Answers.answerid}}">{{Answers.date}}</a>
+                            <a title="Siguiente" class="icon-caret-right" href="{{userData.nick}}/answers/142064902891"></a>
+                        </div>
+                    </div>
+                    <div class="streamItemOptions afm-popover-container old">
+                        <div class="likeButton">
+                            <a class="icon-like" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                            <a class="counter" href="/{{userData.nick}}/answers/{{Answers.answerid}}">0</a>
+                        </div>
+                        <a title="More" class="streamItemOptions-more icon-more" data-action="PopoverOpen" href="#"></a><nav class="afm-popover right" style="display:none"><a class="icon-flag" data-action="PopupOpen" data-url="/{{userData.nick}}/answers/{{Answers.answerid}}/flag" href="#">Report post</a></nav>
+                        <a class="rsp-lte-tablet streamItemOptions-reask icon-reask" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                        <a class="rsp-eql-desktop streamItemOptions-reask icon-reask" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                        <a title="Share now" class="streamItemOptions-share icon-share" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                    </div>
+
+                </div>
+
+                <div class="item-pager likes-container">
+                    <div class="item streamItem streamItem-user " data-login="fer3801">
+                        <a class="btn-secondary " data-action="PopupOpen" data-url="/login/prompt" href="#">Follow</a>
+                        <a style="background-image:url(https://akimg0.ask.fm/125/96189/ee71/4c5f/a119/f5992d10250a/thumb/92576.jpg)" class="askfm-avatar45 emoodji-user emoodji22-user" href="/fer3801"></a>
+                        <a class="streamItemWallContent streamItemContent-user" href="/fer3801"><span class="blockLink old">Mafer</span><span class="blockLink old" dir="ltr">@fer3801</span></a>
+                    </div>
+                    <div class="item streamItem streamItem-user " data-login="FridaMota601">
+                        <a class="btn-secondary " data-action="PopupOpen" data-url="/login/prompt" href="#">Follow</a>
+                        <a style="background-image:url(https://akimg0.ask.fm/587/64cb1/a377/431d/b2aa/b0f4ff01ec94/thumb/1822838.jpg)" class="askfm-avatar45 emoodji-user emoodji71-user" href="/FridaMota601"></a>
+                        <a class="streamItemWallContent streamItemContent-user" href="/FridaMota601"><span class="blockLink old">Frida Mota.</span><span class="blockLink old" dir="ltr">@FridaMota601</span></a>
+                    </div>
+                    <div class="item streamItem streamItem-user " data-login="NaniLopez946">
+                        <a class="btn-secondary " data-action="PopupOpen" data-url="/login/prompt" href="#">Follow</a>
+                        <a style="background-image:url(https://akimg3.ask.fm/d9e/99f56/30f5/40db/a34d/1fab90aa6270/thumb/1787497.jpg)" class="askfm-avatar45 emoodji-user emoodji23-user" href="/NaniLopez946"></a>
+                        <a class="streamItemWallContent streamItemContent-user" href="/NaniLopez946"><span class="blockLink old">LeilaniLD✨</span><span class="blockLink old" dir="ltr">@NaniLopez946</span></a>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <div class="rsp-gte-mobile main-column">
+                <div class="ask-box section rsp-eql-desktop">
+                    <h3>Haz una pregunta a <span dir="ltr">@{{userData.nick}}</span>:</h3>
+                    <form id="askForm" autocomplete="off" class="new_question" data-gtm="{&quot;name&quot;:&quot;ask-question&quot;,&quot;meta&quot;:[]}" data-action="FormXHRSubmit" action="/{{userData.nick}}/ask" accept-charset="UTF-8" method="post">
+                        <input name="utf8" type="hidden" value="&#x2713;" />
+                        <input type="hidden" name="authenticity_token" value="p6gmHWy8n8Sx5VhiqqNxb0FQF987TJu5nQTaswtkbeHF+KZS6j+5suYF0NVanst2g0vqOeDkGt9Ykrsw+YM1zw==" />
+                        <div class="question old">
+                            <textarea placeholder="Qué, cuándo, cómo... pregunta" autofocus="autofocus" data-counter=".optionsBar-counter" data-limit="300" data-atcomplete="/account/friends/autocomplete" name="question[question_text]" id="question_question_text"></textarea>
+                        </div>
+                        <div class="optionsBar">
+                            <input name="question[anonymous]" disabled="disabled" type="hidden" value="0" />
+                            <input id="single_question_anonymous" class="checkbox" disabled="disabled" data-action="PopupOpen" data-url="/login/prompt" type="checkbox" value="true" name="question[anonymous]" />
+                            <label for="single_question_anonymous" class="optionsBar-askMode">
+                                <span>Pregunta anónimamente</span>
+                            </label>
+                            <div class="optionsBar-buttonWrap">
+                                <button name="button" type="button" class="btn-primary" data-action="QuestionSaveAndPopupOpen" data-url="/login/prompt">Preguntar</button>
+                                <div class="optionsBar-option optionsBar-counter"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="rsp-eql-mobile">
+                    <nav class="subTabBar profileTabBar">
+                        <a title="Respuestas" class="icon icon-answer active" href="/{{userData.nick}}"><div class="profileTabAnswerCount">{{userData.t_answers}}</div></a>
+                        <a title="Me gusta" class="icon icon-like" href="/{{userData.nick}}/best"><div class="profileTabLikeCount">0</div></a>
+                        <a title="Regalos" class="icon icon-gift" href="/{{userData.nick}}/gifts"><div class="profileTabGiftCount">0</div></a>
+                    </nav>
+                </div>
+                <div class="rsp-gte-tablet">
+                    <nav class="subTabBar-wide profileTabBar">
+                        <a class="active" href="/{{userData.nick}}"><div class="profileTabAnswerCount">{{userData.t_answers}}</div>Respuestas</a>
+                        <a class="" href="/{{userData.nick}}/best"><div class="profileTabLikeCount">0</div>Me gusta</a>
+                        <a class="" href="/{{userData.nick}}/gifts"><div class="profileTabGiftCount">0</div>Regalos</a>
+                    </nav>
+                </div>
+                <div class="streamItem streamItem-panel heading">
+                    <h1 class="streamItemContent streamItemContent-heading">
+                    {{userData.fullname}} <div>Últimas respuestas</div>
+                    </h1>
+                </div>
+                <a id="newItemsReady" style="display:none" data-action="ItemsPoll" data-poll-url="/{{userData.nick}}/answers/poll?score=1454645225" href="#"></a>
+                <!---->
+                {{#if Answers}}
+                <div class="item-pager ">
+                    <!-- Respuestas -->
+                    {{#each Answers}}
+                    <div class="item streamItem streamItem-answer">
+                        <!-- Question -->
+                        <div class="streamItemContent streamItemContent-question">
+                            <h2>{{question}}</h2>
+                            <a class="questionersName" href="/usuarioquepregunta">{{userid}}</a>
+                        </div>
+                        <!-- Answer -->
+                        <div class="answerWrapper">
+                            <p class="streamItemContent streamItemContent-answer">{{answer}}</p>
+                            <p class="readMore">
+                                <a class="button" data-action="ReadMore" href="#">Ver más</a>
+                            </p>
+                        </div>
+                        <!-- Footer -->
+                        <div class="streamItemContent streamItemContent-footer">
+                            <div class="streamItemsAge links">
+                                <a title="{{date_full}}" href="/{{../userData.nick}}/answers/{{answerid}}">{{date}}</a>
+                            </div>
+                        </div>
+                        <div class="streamItemOptions afm-popover-container">
+                            <div class="likeButton">
+                                <a class="icon-like" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                                <a class="counter" href="/{{../userData.nick}}/answers/{{answerid}}">0</a>
+                            </div>
+                            <a title="Más" class="streamItemOptions-more icon-more" data-action="PopoverOpen" href="#"></a>
+                            <nav class="afm-popover right" style="display:none">
+                                <a class="icon-flag" data-action="PopupOpen" data-url="/{{../userData.nick}}/answers/{{answerid}}/flag" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;report-topic&quot;,&quot;Answer reports&quot;,&quot;New reason&quot;]}" href="#">Denunciar publicaciones</a>
+                            </nav>
+                            <a class="rsp-lte-tablet streamItemOptions-reask icon-reask" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                            <a class="rsp-eql-desktop streamItemOptions-reask icon-reask" data-action="PopupOpen" data-url="/login/prompt" href="#"></a>
+                            <a title="Compartir ahora" class="streamItemOptions-share icon-share" data-action="PopupOpen" data-url="/login/prompt" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;share-topic&quot;,&quot;Share answer&quot;,&quot;New&quot;]}" href="#"></a>
+                        </div>
+                    </div>
+                    {{/each}}
+                     <!-- /Respuestas -->
+
+                     <!-- Ver más respuestas -->
+                    <!--<a class="viewMore" data-action="ItemsMore" data-url="/{{userData.nick}}/answers/more?score=1435374911" href="#">Cargando...</a>-->
+                </div>
+                {{/if}}
+                <!-- Sin respuestas -->
+                <div class="emptyResults icon-owl-sad"{{#if Answers}} style="display:none"{{/if}}>
+                    <p>Este usuario aún no ha respondido ninguna pregunta</p>
+                    <p>Hazle una pregunta a {{userData.fullname}} ahora</p>
+                </div>
+            </div>
+            {{/if}}
+
+            <div class="rsp-eql-desktop side-column">
+                <div class="sticky-anchor">
+                    {{#js_compare "this.userData.bio || this.userData.location || this.userData.websites || this.userData.p_aficiones"}}
+                    <div class="profile-bio section">
+                        <h3>Acerca de {{userData.fullname}}</h3>
+                        {{#if userData.bio}}
+                        <p class="icon-bio">{{userData.bio}}</p>
+                        {{/if}}
+                         {{#if userData.location}}
+                        <p class="icon-location">{{userData.location}}</p>
+                        {{/if}}
+                        {{#if userData.websites}}
+                        <p class="icon-link">{{userData.websites}}</p>
+                        {{/if}}
+                    </div>
+                    {{/js_compares}}
+                    <div class="askfm-ad-slot askfm-ad-slot-side askfm-ad-slot-300x250" data-url="/ads/304?login={{userData.nick}}">
+                        <a target="_blank" rel="noopener" class="askfm-default-ad" href="http://support.ask.fm">
+                            <img src="https://static.ask.fm/assets/house_banner_support_center-e233cf79b06de1971be117e8c49d3c33d7a7e9ba6d8b9f487a0733202b3fd865.png" />
+                        </a>
+                    </div>
+                </div>
+
+                <div data-stick-to=".sticky-anchor">
+                    <footer>
+                        <nav class="social-links">
+                            <a class="icon-askfm-solo" target="_blank" href="https://ask.fm/askfm"></a>
+                            <a class="icon-facebook-solo" target="_blank" rel="noopener" href="https://www.facebook.com/askfmpage"></a>
+                            <a class="icon-twitter-solo" target="_blank" rel="noopener" href="https://twitter.com/askfm"></a>
+                            <a class="icon-instagram-solo" target="_blank" rel="noopener" href="https://instagram.com/askfm"></a>
+                            <a class="icon-vk-solo" target="_blank" rel="noopener" href="https://vk.com/askfm"></a>
+                        </nav>
+                        <span class="copyright">&copy; Ask.fm 2017</span>
+                        <a class="language icon-language" title="Elige el idioma" data-action="PopupOpen" data-url="/home/languages" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;language&quot;,&quot;Home&quot;,&quot;Locales&quot;]}" href="#">Español</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rsp-eql-mobile">
+    <div class="askfm-ad-slot askfm-ad-slot-bottom askfm-ad-slot-320x50" data-url="/ads/504?login={{userData.nick}}"></div>
+</div>
+
+
+
+
+
+{{> "footer"}}

@@ -1,0 +1,225 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <script>
+//<![CDATA[
+function logError(b,d,e,c,a){try{var g,h="";a=a||b;b=(a.message||a.description||b).toString();stack=(a.stack||a.backtrace||a.stacktrace||"").toString();g=a.target||"";d=(d||a.fileName||a.sourceURL||g.src).toString();c=c||window.event&&window.event.errorCharacter;e=(e||a.lineNumber||a.line).toString()+(c?":"+c:"");try{localStorage.setItem("test","test"),localStorage.removeItem("test"),(new FormData).append("test","test")}catch(l){h="1"}var f,k={m:b,s:stack,f:d||"",l:e||"",u:document.location,w:h};
+b="";for(f in k)b+=f+"="+encodeURIComponent(k[f])+"&";(new Image).src="/home/jserror?"+b}catch(l){}}window.onerror=logError;
+
+//]]>
+</script>
+    <title>Muro | ASKfm</title>
+    <meta name="description" content="Find out what people want to know about you. Ask questions and get answers on any topic!" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="52PM93LtKpDN3cQuFwx002VKxpX3FY9ioK5rHNYvfv0t1p2+ee0OTDsYTcSRUBq20qEuw71JsfWQr1/vBRQTUg==" />
+
+    <link rel="stylesheet" media="all" href="/assets/css/style.css" data-turbolinks-track="true" />
+    <script src="/assets/js/app.js" data-turbolinks-track="true"></script>
+  </head>
+
+
+  <body class="contentBody theme0 twoColumnBody" data-id="wall/index"><script>
+  window.Config && window.Config.init({"poller:interval":30000,"poller:cache_limit":10,"mass_ask_limit":50,"flash:delay":3000,"gtm":true,"uploader:max_size":8388608,"uploader:resize:enabled":false,"uploader:resize:max_size":13000000,"uploader:resize:max_dimension":2048,"page:category":"Wall","page:type":"Index","page:user_id":"dd8567c3a69ba22973eb82beae73bd1e"});
+</script>
+
+<div id="loaderMother" style="display:none"></div>
+    <div id="topMenu">
+
+        <div class="rsp-eql-desktop">
+  <div class="topBar rsp-container ">
+    <a class="icon-askfm-logo topBar-left" href="/account/wall"></a>
+
+
+      <nav class="desktop-menu">
+        <a class="active" href="/account/wall">Muro</a>
+        <a class="" href="/account/inbox">Preguntas</a>
+        <a class="" href="/ddd869">Perfil</a>
+        <a class="" href="/account/friends">Amigos</a>
+        <a class="" href="/account/notifications">
+          Notificaciones
+          <span class="notificationCounter" style="display:none" data-poll-url="/account/notifications/counts">0</span>
+</a>        <a title="Cuenta" class="icon-settings icon-menu-item" data-action="MenuToggle" data-target="#settings-popover-menu" href="#"></a>
+        <nav id="settings-popover-menu" class="popover-menu" style="display:none">
+          <a href="/account/settings/profile">Configuración</a>
+          <a data-action="ButtonPostOnce" data-url="/logout" href="#">Salir</a>
+        </nav>
+
+
+          <a title="Selecciona tu opción" class="icon-create-content icon-menu-item" data-action="MenuToggle" data-target="#content-popover-menu" href="#"></a>
+          <nav id="content-popover-menu" class="popover-menu" style="display:none">
+            <a class="icon-photopoll-inverse icon util-clearfix" href="/account/photopoll-friends">Crear encuesta</a>
+            <a class="icon-ask-question icon util-clearfix" href="/account/ask-friends">Hacer una pregunta</a>
+          </nav>
+
+
+      </nav>
+
+  </div>
+</div>
+
+<div class="rsp-lte-tablet">
+  <div class="topBar rsp-container with-flex">
+
+      <div class="topBar-left">
+          <a class="btn-action-icon icon-hamburger" title="Menú" data-action="PopupOpen" data-url="/home/menu" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;menu&quot;,&quot;Home&quot;,&quot;Menu&quot;]}" href="#"></a>
+      </div>
+      <div class="topBar-right">
+          <span class="right afm-popover-container rsp-lte-tablet">
+
+
+      <a title="Selecciona tu opción" class="btn-action-icon icon-create-content" data-action="PopoverOpen" href="#"></a>
+      <nav class="afm-popover right bottom" style="display:none">
+        <a class="icon-photopoll-inverse util-clearfix" href="/account/photopoll-friends">Crear encuesta</a>
+        <a class="icon-ask-question util-clearfix" href="/account/ask-friends">Hacer una pregunta</a>
+      </nav>
+
+
+  </span>
+
+      </div>
+        <a class="icon-askfm-logo" href="/account/wall"></a>
+
+  </div>
+</div>
+
+
+<div class="tabBar">
+  <div class="rsp-container">
+
+    <a title="Muro" class="tabBarTab icon-tab-home active" href="/account/wall"></a>
+    <a title="Preguntas" class="tabBarTab icon-tab-questions" href="/account/inbox"></a>
+    <a title="Perfil" class="tabBarTab icon-tab-profile" href="/ddd869"></a>
+    <a title="Amigos" class="tabBarTab icon-tab-friends" href="/account/friends"></a>
+    <a title="Notificaciones" class="tabBarTab icon-tab-notifications" href="/account/notifications">
+      <span class="tabBar-notification notificationCounter" style="display:none" data-poll-url="/account/notifications/counts">0</span>
+</a>  </div>
+</div>
+
+
+
+<div style="display:none" class="flash-message notice">
+  <p class="util-relative rsp-container">
+
+    <a href="" class="icon-close" data-action="FlashHide"></a>
+</p></div>
+
+    </div>
+
+    <div id="contentArea" class="withTabBar">
+      <div class="rsp-container">
+
+        <div class="rsp-row main-content util-clearfix">
+          <div class="rsp-gte-mobile main-column">
+
+<div class="ask-box section rsp-gte-tablet">
+
+
+    <div class="header old">
+      <div class="icon-ask-question-stroke question-link">Pregúntale a tus amigos</div>
+      <a class="icon-photopoll photopoll-link" data-action="PopupOpen" data-url="/account/photopoll-friends" href="#">Crear encuesta</a>
+    </div>
+
+
+  <form id="askForm" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;mass-question&quot;,&quot;Mass questions&quot;,&quot;New&quot;]}" data-action="PopupOpen" action="/account/ask-friends" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="6f3cInb3YVOCDiw9cKmIDt5l5XD8mgGqExxtLJi2JBYjSI1rffdFj3TLpdf29eZraY4NJrbGPz0jHVnfS41JuQ==" />
+
+      <div class="question">
+        <textarea placeholder="Qué, cuándo, cómo... pregunta" data-counter=".optionsBar-counter" data-limit="300" data-atcomplete="/account/friends/autocomplete" name="question[question_text]" id="question_question_text">
+</textarea>
+      </div>
+
+      <div class="optionsBar">
+        <button name="button" type="submit" class="btn-primary">Preguntar</button>
+
+        <div class="optionsBar-option optionsBar-counter"></div>
+        <input name="question[anonymous]" type="hidden" value="0" /><input class="checkbox" id="mini_question_anonymous" type="checkbox" value="true" checked="checked" name="question[anonymous]" />
+        <label for="mini_question_anonymous" class="optionsBar-askMode">
+          <span>Pregunta anónimamente</span>
+        </label>
+      </div>
+</form></div>
+
+
+
+<div class="rsp-eql-mobile">
+  <nav class="subTabBar feedTabBar">
+        <a class="active" href="/account/wall">MURO</a>
+        <a class="" data-poll-url="/account/discover/updated" href="/account/discover">DISCOVER</a>
+  </nav>
+</div>
+
+<div class="rsp-gte-tablet">
+  <nav class="subTabBar-wide feedTabBar">
+      <a class="active" href="/account/wall">MURO</a>
+      <a class="" data-poll-url="/account/discover/updated" href="/account/discover">DISCOVER</a>
+  </nav>
+</div>
+
+
+
+
+    <div class="emptyResults" style="">
+    <p>¡Con amigos es más divertido!</p>
+    <a class="btn-secondary icon-add-friend" href="/account/friends/social">Encontrar a amigos</a>
+  </div>
+
+  <div class="emptyResults" style="">
+    <p>Comparte este enlace con tus amigos para recibir más preguntas</p>
+    <a class="btn-secondary icon-share" data-action="PopupOpen" data-url="/account/share-profile" href="#">Comparte tu perfil</a>
+  </div>
+
+
+
+          </div>
+
+            <div class="rsp-eql-desktop side-column">
+              <div class="sticky-anchor">
+
+
+                <div class="askfm-ad-slot askfm-ad-slot-side askfm-ad-slot-300x250" data-url="/ads/302"><a target="_blank" rel="noopener" class="askfm-default-ad" style="display:none" href="http://support.ask.fm"><img src="https://static.ask.fm/assets/house_banner_support_center-e233cf79b06de1971be117e8c49d3c33d7a7e9ba6d8b9f487a0733202b3fd865.png" /></a></div>
+
+              </div>
+              <div data-stick-to=".sticky-anchor">
+
+                <footer>
+  <nav class="site-links">
+    <a target="_blank" rel="noopener" href="https://about.ask.fm?lang=es">Acerca de ASKfm</a>
+    <a target="_blank" rel="noopener" href="https://safety.ask.fm?lang=es">Centro de seguridad</a>
+    <a target="_blank" rel="noopener" href="http://support.ask.fm?lang=es">Ayuda</a>
+    <a target="_blank" rel="noopener" href="https://safety.ask.fm/community-guidelines/?lang=es">Directrices de la comunidad</a>
+    <a target="_blank" rel="noopener" href="https://about.ask.fm/terms/?lang=es">Términos de uso</a>
+    <a target="_blank" rel="noopener" href="https://about.ask.fm/privacy-policy/?lang=es">Política de privacidad</a>
+    <a target="_blank" rel="noopener" href="https://about.ask.fm/cookie-policy/?lang=es">Política de cookies</a>
+    <a target="_blank" rel="noopener" href="https://about.ask.fm/advertising/?lang=es">Publicidad</a>
+  </nav>
+  <nav class="social-links">
+  <a class="icon-askfm-solo" target="_blank" href="https://ask.fm/askfm"></a>
+  <a class="icon-facebook-solo" target="_blank" rel="noopener" href="https://www.facebook.com/askfmpage"></a>
+  <a class="icon-twitter-solo" target="_blank" rel="noopener" href="https://twitter.com/askfm"></a>
+  <a class="icon-instagram-solo" target="_blank" rel="noopener" href="https://instagram.com/askfm"></a>
+  <a class="icon-vk-solo" target="_blank" rel="noopener" href="https://vk.com/askfm"></a>
+</nav>
+
+  <span class="copyright">&copy; Ask.fm 2017</span>
+  <a class="language icon-language" title="Elige el idioma" data-action="PopupOpen" data-url="/home/languages" data-gtm="{&quot;name&quot;:&quot;popup&quot;,&quot;meta&quot;:[&quot;language&quot;,&quot;Home&quot;,&quot;Locales&quot;]}" href="#">Español</a>
+</footer>
+
+              </div>
+            </div>
+        </div>
+      </div>
+</div>
+      <div class="rsp-eql-mobile"><div class="askfm-ad-slot askfm-ad-slot-bottom askfm-ad-slot-320x50" data-url="/ads/502"></div></div>
+
+
+
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DVX4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<noscript><img src="//pixel.quantserve.com/pixel/p-r1DAFnUnQgqGA.gif?labels=_fp.event.Default" style="display:none;" border="0" height="1" width="1" alt="Quantcast"/></noscript>
+</body>
+</html>
+

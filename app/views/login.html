@@ -1,0 +1,37 @@
+{{> "header"}}
+
+<div id="contentArea" class="">
+	<div class="rsp-container">
+		<div class="rsp-row main-content util-clearfix">
+			<div class="rsp-gte-mobile main-column">
+				<form id="loginForm" data-action="FormXHRSubmit" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9L4WnoL7mBmYn+2tg2jYe0P075rMzdSvTUtX0L621G2oHED1L3l2Dnj0X5gl+JWGlN4RLWkCdB6zdQPr1xrtew==" />
+					<div class="inputFormBox">
+						<div class="inputFormPadding">
+							<input type="text" name="login" class="inputForm" maxlength="40" placeholder="Nombre usuario o correo electrónico" autocomplete="username" autofocus="autofocus" data-input="CaptchaReload" />
+						</div>
+						<div class="inputFormPadding">
+							<input type="password" name="password" class="inputForm" maxlength="20" placeholder="Contraseña" autocomplete="current-password" />
+						</div>
+					</div>
+					<div class="captcha-container" style="display:none" data-url="/login/captcha"></div>
+					<div class="simpleFormItem">
+						<input type="submit" class="btn-primary-wide" value="Iniciar sesión">
+					</div>
+					<div class="simpleFormItem">
+						<input type="checkbox" name="remember_me" id="rememberMe" value="1" class="checkbox" checked="checked" />
+						<label for="rememberMe">Recordar mis datos</label>
+						<a href="/login/recover">¿Olvidaste tu contraseña?</a>
+					</div>
+				</form>
+				<div class="loginServices">
+					<h2 class="strikeThrough"><span>Iniciar sesión con</span></h2>
+					<a class="loginService icon-facebook-solo" data-action="ButtonPostOnce" data-url="/account/facebook/authorize?target=login" data-window="_blank"></a>
+					<a class="loginService icon-twitter-solo" data-action="ButtonPostOnce" data-url="/account/twitter/authorize?target=login" data-window="_blank"></a>
+					<a class="loginService icon-vk-solo" data-action="ButtonPostOnce" data-url="/account/vkontakte/authorize?target=login" data-window="_blank"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> "footer"}}

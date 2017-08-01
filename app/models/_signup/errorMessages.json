@@ -1,0 +1,6 @@
+{
+	"userNameLength": "¡Un buen comienzo! Sin embargo, necesitas por lo menos 3 caracteres",
+	"userNameAvailable": "Este nombre de usuario ya se está usando. ¡Elige otro!",
+	"emailAvailable": "El correo electrónico ya está en uso. ¡Elige otro o inicia sesión!",
+	"notValidEmail": "El correo electrónico no es válido, por favor use la estructura 'usuario@server.com' "
+}

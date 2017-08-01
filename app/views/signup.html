@@ -1,0 +1,149 @@
+{{> "header"}}
+
+<div id="contentArea" class="">
+	<div class="rsp-container">
+		<div class="rsp-row main-content util-clearfix">
+			<div class="rsp-gte-mobile main-column">
+				<div class="loginServices">
+					<h2 class="strikeThrough"><span>Registrarse por</span></h2>
+					<a class="loginService icon-facebook-solo" data-action="ButtonPostOnce" data-url="/account/facebook/authorize?target=signup" data-window="_blank"></a>
+					<a class="loginService icon-twitter-solo" data-action="ButtonPostOnce" data-url="/account/twitter/authorize?target=signup" data-window="_blank"></a>
+					<a class="loginService icon-vk-solo" data-action="ButtonPostOnce" data-url="/account/vkontakte/authorize?target=signup" data-window="_blank"></a>
+					<h2 class="strikeThrough"><span>O</span></h2>
+				</div>
+				<form id="signupForm" autocomplete="off" class="new_user" data-action="SubmitWithTimezone" action="/signup" accept-charset="UTF-8" method="post">
+					<input name="utf8" type="hidden" value="&#x2713;" />
+					<input type="hidden" name="authenticity_token" value="W7scLnUuSUjIiw0qOiz3HxHxJqc/rTz9i40KSzkzkAYHGUpF2KynXyjgvx+cvLrixtvYEJpinEx1s15wUJ+pEA==" />
+
+					<input type="hidden" name="user[tz_id]" id="user_tz_id" />
+					<input type="hidden" name="user[gmt_offset]" id="user_gmt_offset" />
+
+					<div class="inputFormBox">
+						<div class="inputFormPadding">
+							<input type="email" class="inputForm" maxlength="50" placeholder="Correo electrónico" autofocus="autofocus" data-input="LoginSuggest" size="50" name="user[email]" id="user_email" />
+						</div>
+						<div class="inputFormPadding">
+							<input class="inputForm" maxlength="30" placeholder="Nombre y apellidos" autocomplete="name" data-input="LoginSuggest" size="30" type="text" name="user[name]" id="user_name" />
+						</div>
+						<div class="inputFormPadding suggest-input">
+							<input class="inputForm" maxlength="40" placeholder="Nombre de usuario" autocomplete="username" data-input="LoginCheck" data-url="/signup/suggest" size="40" type="text" name="user[login]" id="user_login" />
+							<a class="icon-reload" data-action="LoginReset" href="#"></a>
+						</div>
+						<div class="inputFormPadding">
+							<input class="inputForm" maxlength="20" placeholder="Contraseña" autocomplete="new-password" size="20" type="password" name="user[password]" id="user_password" />
+						</div>
+					</div>
+
+					<div class="simpleFormItem">
+						<h3 class="simpleFormLabel">Cumpleaños</h3>
+						<table class="multiFormHolder">
+							<tbody>
+								<tr data-confirm="¿Son tus datos personales correctos?">
+									<td class="leftSideCellFill">
+										<select id="date_day" name="user[born_at_day]" class="selectForm" data-action="SignupConfirmDob">
+											<option value="">Día</option>
+											{{#for "i" action="i = 1;i<=30;++i"}}
+												<option value="{{i}}">{{i}}</option>
+											{{/for}}
+										</select>
+									</td>
+									<td class="mainCellFill">
+										<select id="date_month" name="user[born_at_month]" class="selectForm" data-action="SignupConfirmDob">
+											<option value="">Mes</option>
+											{{#each months}}
+											<option value="{{@index+1}}">{{this}}</option>
+											{{/each}}
+										</select>
+									</td>
+									<td class="rightSideCellFill">
+										<select id="date_year" name="user[born_at_year]" class="selectForm" data-action="SignupConfirmDob">
+											<option value="">Año</option>
+											{{#for "i" action="i = new Date().getFullYear();i>=1950;--i"}}
+											<option value="{{i}}">{{i}}</option>
+											{{/for}}
+									</select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="simpleFormItem">
+						<h3 class="simpleFormLabel">Soy</h3>
+						<select class="selectForm" name="user[gender_id]" id="user_gender_id"><option value=""></option>
+							<option value="1">Mujer</option>
+							<option value="2">Hombre</option>
+						</select>
+					</div>
+
+					<div class="simpleFormItem">
+						<h3 class="simpleFormLabel">Idioma</h3>
+						<select class="selectForm" name="user[language_code]" id="user_language_code">
+							<option dir="ltr" value="az">Azərbaycan</option>
+							<option dir="ltr" value="id">Bahasa Indonesia</option>
+							<option dir="ltr" value="ms">Bahasa Melayu</option>
+							<option dir="ltr" value="bs">Bosanski</option>
+							<option dir="ltr" value="da">Dansk</option>
+							<option dir="ltr" value="de">Deutsch</option>
+							<option dir="ltr" value="et">Eesti</option>
+							<option dir="ltr" value="en">English</option>
+							<option dir="ltr" selected="selected" value="es">Español</option>
+							<option dir="ltr" value="tl">Filipino</option>
+							<option dir="ltr" value="fr">Français</option>
+							<option dir="ltr" value="hr">Hrvatski</option>
+							<option dir="ltr" value="it">Italiano</option>
+							<option dir="ltr" value="lv">Latviešu</option>
+							<option dir="ltr" value="lt">Lietuvių</option>
+							<option dir="ltr" value="hu">Magyar</option>
+							<option dir="ltr" value="nl">Dutch</option>
+							<option dir="ltr" value="nn">Norsk</option>
+							<option dir="ltr" value="pl">Polski</option>
+							<option dir="ltr" value="pt">Português</option>
+							<option dir="ltr" value="pt-BR">Português (Brasil)</option>
+							<option dir="ltr" value="ro">Română</option>
+							<option dir="ltr" value="sk">Slovenčina</option>
+							<option dir="ltr" value="sl">Slovenščina</option>
+							<option dir="ltr" value="fi">Finnish</option>
+							<option dir="ltr" value="sv">Svenska</option>
+							<option dir="ltr" value="vi">Tiếng Việt</option>
+							<option dir="ltr" value="tr">Türkçe</option>
+							<option dir="ltr" value="cs">Čeština</option>
+							<option dir="ltr" value="el">Ελληνικά</option>
+							<option dir="ltr" value="be">Беларуская</option>
+							<option dir="ltr" value="bg">Български</option>
+							<option dir="ltr" value="mk">Македонски</option>
+							<option dir="ltr" value="mn">Монгол хэл</option>
+							<option dir="ltr" value="ru">Русский</option>
+							<option dir="ltr" value="sr">Српски</option>
+							<option dir="ltr" value="uk">Українська</option>
+							<option dir="ltr" value="hy">հայերեն</option>
+							<option dir="rtl" value="ar">العربية</option>
+							<option dir="ltr" value="bn">বাংলা</option>
+							<option dir="rtl" value="he">עברית</option>
+							<option dir="ltr" value="hi">मानक हिन्दी</option>
+							<option dir="rtl" value="fa">پارسی</option>
+							<option dir="ltr" value="th">ภาษาไทย</option>
+							<option dir="ltr" value="ka">ქართული</option>
+							<option dir="ltr" value="ja">日本語</option>
+							<option dir="ltr" value="zh-TW">正體中文</option>
+							<option dir="ltr" value="zh-CN">中文</option>
+							<option dir="ltr" value="ko">한국어</option>
+						</select>
+					</div>
+
+					<div class="captcha-container" style="display:block" data-url="/signup/captcha"></div>
+
+					<div class="simpleFormItem" id="signupFooter">
+						Al registrarte aceptas nuestras <a target="_blank" rel="noopener" href="https://about.ask.fm/terms/?lang=es">Condiciones</a> y nuestra <a target="_blank" rel="noopener" href="https://about.ask.fm/privacy-policy/?lang=es">Política de privacidad</a>
+						<input type="submit" class="btn-primary-wide" value="Registrarse">
+						<p>
+						Tu nombre así como cualquier información publicada en tu perfil estará visible para otros usuarios. La información que facilitas puede ser compartida por terceros tal y como se explica en nuestra <a target="_blank" rel="noopener" href="https://about.ask.fm/privacy-policy/?lang=es">Política de privacidad</a>. Te rogamos que no facilites ninguna información que no quieras compartir.
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> "footer"}}

@@ -1,0 +1,10 @@
+{
+	"email": "Introduce tu dirección de correo electrónico.",
+	"name": "¿Cómo te llamas?",
+	"login": "¡Crea un nombre de usuario!",
+	"password": "¡Crea una contraseña!",
+	"born_at_day": "Dinos cuándo naciste.",
+	"born_at_month": "Dinos cuándo naciste.",
+	"born_at_year": "Dinos cuándo naciste.",
+	"gender_id": "Indica tu sexo."
+}

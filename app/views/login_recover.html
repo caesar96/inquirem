@@ -1,0 +1,24 @@
+{{> "header"}}
+<div id="contentArea" class="">
+	<div class="rsp-container">
+
+	<div class="rsp-row main-content util-clearfix">
+		<div class="rsp-gte-mobile main-column">
+			<form id="recoverForm" data-action="FormXHRSubmit" action="/login/recover" accept-charset="UTF-8" method="post">
+				<input name="utf8" type="hidden" value="&#x2713;" />
+				<input type="hidden" name="authenticity_token" value="E+M8zbzZahzo19hreZx7p+ReRh8vHT4bL9YGvO+xHiM/6lbAIWmFK52YNOzWRmqorW8195oS1FwxY4BVDwy1Dw==" />
+				<div class="inputFormBox">
+					<div class="inputFormPadding">
+						<input class="inputForm" autofocus="autofocus" placeholder="Correo electrónico" type="email" name="recovery[email]" id="recovery_email" />
+					</div>
+				</div>
+				<div class="simpleFormItem">
+					<input type="submit" name="commit" value="Continuar" class="btn-primary-wide inverse" />
+				</div>
+			</form>
+		</div>
+
+	</div>
+	</div>
+</div>
+{{> "footer"}}

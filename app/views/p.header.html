@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+	<title>{{title}}</title>
+	<meta name="description" content="Find out what people want to know about you. Ask questions and get answers on any topic!" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta name="csrf-param" content="authenticity_token" />
+	<meta name="csrf-token" content="or7E1UuE+Al7xvTwrVpiYyJhFqVLOLdo9qxqVDsTLzf+HJK+5gYWHputRsULyi+e9UvoEu73F9kIkj5vUr8WIQ==" />
+	<meta charset="utf-8"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Ask and Answer - ASKfm" />
+	<meta property="og:description" content="Find out what people want to know about you. Ask questions and get answers on any topic!" />
+	<meta property="og:url" content="https://ask.fm/" />
+	<meta property="og:image" content="{{Config.staticFilesUrl}}/assets/images/logo-preview-8de04b038ed54339d316d36c3f9ebb1fcae0fad398b7f968908d8e2d4ae20318.png" />
+	<link rel="image_src" href="{{Config.staticFilesUrl}}/assets/images/logo-preview-8de04b038ed54339d316d36c3f9ebb1fcae0fad398b7f968908d8e2d4ae20318.png" />
+	<link rel="stylesheet" media="all" href="{{Config.staticFilesUrl}}/assets/css/style.css" data-turbolinks-track="true" />
+	<!--<script src="/assets/js/turbolinks.js" data-turbolinks-track="reload"></script>
+	<script src="/assets/js/jquery.js" data-turbolinks-track="reload"></script>-->
+	<script src="{{Config.staticFilesUrl}}/assets/js/_app.js" data-turbolinks-track="true"></script>
+	<!--<script src="https://static.ask.fm/assets/application-2d2a70a834b6f78d943a45a1cccba04125c6ebd1ae53b930ee3ffc64d49ebff4.js" data-turbolinks-track="reload"></script>-->
+
+	<!--<script src="/assets/js/app.js" data-turbolinks-track="true"></script>-->
+</head>
+
+<body class="{{#js_compare "this.page == 'welcome'"}}welcome{{#if welcome}}{{welcome}}{{else}}0{{/if}}{{/js_compare}}{{#js_compare "this.page !== 'welcome'"}}contentBody {{#js_compare "this.page !== 'profile'"}}dialogBody {{/js_compare}}theme0 {{/js_compare}}{{#js_compare "this.page == 'profile'"}}twoColumnBody {{/js_compare}}" data-id="home/welcome">
+	<script type="text/javascript">
+	window.Config && window.Config.init({"poller:interval":30000,"poller:cache_limit":10,"mass_ask_limit":50,"flash:delay":3000,"gtm":true,"uploader:max_size":8388608,"uploader:resize:enabled":false,"uploader:resize:max_size":13000000,"uploader:resize:max_dimension":2048,"page:category":"Home","page:type":"Welcome","page:user_id":null});
+	</script>
+	<div id="loaderMother" style="display:none"></div>
+	{{#js_compare "this.page == 'welcome'"}}
+	<div class="welcome-container util-vcontainer">
+	{{/js_compare}}
+	{{#js_compare "this.page !== 'welcome'"}}
+	<div id="topMenu">
+		<div class="rsp-eql-desktop">
+			<div class="topBar rsp-container with-flex">
+				<a class="icon-askfm-logo topBar-left" href="/"></a>
+				<div class="topBar-right">
+					{{#js_compare "this.page !== 'profile'"}}
+					<a class="btn-action plain" href="{{#js_compare "this.page == 'signup'"}}/login{{else}}/signup{{/js_compare}}">{{#js_compare "this.page == 'signup'"}}Iniciar sesión{{else}}Registrarse{{/js_compare}}</a>
+					{{else}}
+	                <a class="btn-action plain" data-action="PopupOpen" data-url="/signup" href="#">Registrarse</a>
+	                <a class="btn-action plain" data-action="PopupOpen" data-url="/login" href="#">Iniciar sesión</a>
+	                {{/js_compare}}
+				</div>
+				{{#js_compare "this.page !== 'profile'"}}<h1>{{#js_compare "this.page == 'signup'"}}Registrarse{{else}}Iniciar sesión{{/js_compare}}</h1>{{/js_compare}}
+			</div>
+		</div>
+		<div class="rsp-lte-tablet">
+			<div class="topBar rsp-container ">
+				<div class="topBar-left">
+					{{#js_compare "this.page !== 'profile'"}}
+					<a title="Atrás" class="btn-action-icon icon-back" href="/"></a>
+					{{else}}
+					<a class="btn-action plain" data-action="PopupOpen" data-url="/signup" href="#">Registrarse</a>
+					{{/js_compare}}
+				</div>
+				<div class="topBar-right">
+					{{#js_compare "this.page !== 'profile'"}}
+					<a class="btn-action plain" href="{{#js_compare "this.page == 'signup'"}}/login{{else}}/signup{{/js_compare}}">{{#js_compare "this.page == 'signup'"}}Iniciar sesión{{else}}Registrarse{{/js_compare}}</a>
+					{{else}}
+	                <a class="btn-action plain" data-action="PopupOpen" data-url="/login" href="#">Iniciar sesión</a>
+					{{/js_compare}}
+				</div>
+				{{#js_compare "this.page !== 'profile'"}}<h1>{{#js_compare "this.page == 'signup'"}}Registrarse{{else}}Iniciar sesión{{/js_compare}}</h1>{{else}}<a class="icon-askfm-logo" href="/"></a>{{/js_compare}}
+			</div>
+		</div>
+		<div style="display:none" class="flash-message notice">
+			<p class="util-relative rsp-container">
+				<a href="" class="icon-close" data-action="FlashHide"></a>
+			</p>
+		</div>
+	</div>
+	{{/js_compare}}
