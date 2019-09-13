@@ -17,5 +17,5 @@ const app = require(_APP_);
 
 // Starting the HTTP server
 app.listen(process.env.PORT || 5000, () => {
-    !(process.env.NODE_ENV == 'production') && console.log("Running on port ", process.env.PORT || 500);
+    !(process.env.NODE_ENV == 'production') && console.log("Running on port ", process.env.PORT || 5000);
 });

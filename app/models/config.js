@@ -8,7 +8,7 @@ const Config = {
         "status"    :   0,
         "message"   :   "Hola, estamos realizando unas mejoras al sistema.<br />Por esta razón el sitio estará en mantenimiento por unos días.<br />Te sugerimos volver en unas horas."
     },
-    "staticFilesUrl"   :   "https://imalaga.ml"
+    "staticFilesUrl"   :   "https://malaa.ga"
 };
 
 (process.env.NODE_ENV == 'production') && (Config.staticFilesUrl = process.env.STATIC_FILES_URL);

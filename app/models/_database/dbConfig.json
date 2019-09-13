@@ -1,8 +1,8 @@
 {
     "settings": {
         "host": "localhost",
-        "user": "postgres",
-        "password": "cero1996",
+        "user": "jcesarlp96",
+        "password": "",
         "database": "inquirem"
     },
     "pool": true
