@@ -12,7 +12,7 @@ global.VIEWS = _APP_ + 'views/';
 global._DATABASE_ = MODELS + '_database/';
 global.IMG_UPLOADS = ROOT + 'assets/uploads/images/users/';
 
-/////////// Include App Controller ((Koa)) //
+////////////// Include App Controller ((Koa)) //
 const app = require(_APP_);
 
 // Starting the HTTP server
